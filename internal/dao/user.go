@@ -12,7 +12,7 @@ func (u *User) GetID() uint64 {
 	return u.Id
 }
 
-func (_ *User) GetTable() string {
+func (*User) GetTable() string {
 	return "user"
 }
 

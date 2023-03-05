@@ -60,6 +60,7 @@ func main() {
 	pingApi := api.NewPing(svc)
 	posApi := api.NewCorpus(svc)
 	loginApi := api.NewLogin(svc)
+	wordClassApi := api.NewWordClass(svc)
 	categoryApi := api.NewCategory(svc)
 
 	// server
@@ -68,6 +69,7 @@ func main() {
 		posApi,
 		loginApi,
 		categoryApi,
+		wordClassApi,
 	)
 
 	err = srv.Start()

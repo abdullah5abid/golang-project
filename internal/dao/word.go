@@ -11,7 +11,7 @@ func (w *Word) GetID() uint64 {
 	return w.ID
 }
 
-func (_ *Word) GetTable() string {
+func (*Word) GetTable() string {
 	return "word"
 }
 

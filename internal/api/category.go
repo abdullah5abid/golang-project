@@ -1,7 +1,6 @@
 package api
 
 import (
-	"log"
 	"net/http"
 	"strconv"
 
@@ -66,7 +65,7 @@ func (api *Category) GetSubCategories(w http.ResponseWriter, r *http.Request) {
 	// fetch categories from category service
 	categories, err := api.svc.GetSubCategories(r.Context(), uint(cId))
 	if err != nil {
-		log.Println(err)
+
 		if errors.IsNotFound(err) {
 			respondErrorMessage(w, http.StatusNotFound, "category not found")
 			return

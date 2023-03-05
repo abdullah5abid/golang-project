@@ -6,11 +6,11 @@ type WordPos struct {
 	PosId   uint64 `db:"pos_id"`
 }
 
-//func (wp *WordPos) GetID() uint64 {
-//	return 0
-//}
+func (*WordPos) GetID() uint64 {
+	return 0
+}
 
-func (_ *WordPos) GetTable() string {
+func (*WordPos) GetTable() string {
 	return "word_pos"
 }
 

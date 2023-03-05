@@ -28,7 +28,7 @@ func (p *POS) GetID() uint64 {
 	return p.ID
 }
 
-func (p *POS) GetTable() string {
+func (*POS) GetTable() string {
 	return "pos"
 }
 
